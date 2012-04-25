@@ -45,7 +45,7 @@ $(TESTS): test-pre-clean
 	-cd tests && ./$(notdir $@) $(TEST_OPTIONS)
 
 test: aggregate-results
-	tests/aggregate-results.sh tests/test-results/t*-*
+	tests/aggregate-results.sh tests/test-results/*.stats
 	rm -rf tests/test-results
     
 # Force tests to get run every time
